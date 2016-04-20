@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+input.onblur = function() {
+	if (isNaN(this.value)) { // введено не число
+		// показать ошибку
+		this.className = "error";
+		error.innerHTML = 'Вы ввели не число. Исправьте, пожалуйста.'
+	}
+};
+
+input.onfocus = function() {
+	if (this.className == 'error') { // сбросить состояние "ошибка", если оно есть
+		this.className = "";
+		error.innerHTML = "";
+	}
+};
+</script>
+</head><body>
+
+<style> .error { border-color: red; } </style>
+
+Введите ваш возраст: <input type="text" id="input">
+
+<div id="error"></div>
+
+
+
+</body>
+</html>

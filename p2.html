@@ -1,0 +1,65 @@
+<?php
+  echo "1111111111111111111111111";
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf8" />
+	<title>New document</title>
+	<script language="javascript">
+// Теперь эта функция будет принимать указатель на объект, после которого нужно осуществить вставку
+
+var items=1;
+function AddItem(obj)
+{
+	var divv=document.getElementById('items');
+	//button=document.getElementById("add");
+	items++;
+	var count = document.getElementById( 'count' );
+	if(count) count.value = items;
+	newitem='<p>';
+	newitem='<select name="pred' + items + '">';
+
+	//newitem='<select name="pred1">';
+	newitem+='<option value ="1">Українська мова</option>';
+	newitem+='<option value ="2" selected>Українська література</option>';
+	newitem+='<option value ="3">Англійська мова</option>';
+	newitem+='<option value ="4">Зарубіжна література</option>';
+	newitem+='<option value ="5">Російська мова</option>';
+	newitem +='<input type="button" value="+" onclick="AddItem(this.parentNode)">';
+	newitem +='<input type="button" value="-" onclick="del_input(this.parentNode)">';
+
+	newnode=document.createElement('div');
+	newnode.innerHTML=newitem;
+	if (obj.nextSibling)
+		divv.insertBefore(newnode,obj.nextSibling)
+
+	else  divv.appendChild(newnode);
+}
+
+function del_input(obj)
+{
+	document.getElementById('items').removeChild(obj);
+}
+</script>
+</head>
+<body>
+<form name="form1" action="iindex.php" method="get" >
+<input type="hidden" name="kp" value="1"  id = "count"/>
+<div id="items">
+<div>
+<select name="pred1">
+<option value ="1">Українська мова</option>
+<option value ="2" selected>Українська література</option>
+<option value ="3">Англійська мова</option>
+<option value ="4">Зарубіжна література</option>
+<option value ="5">Російська мова</option>
+</select>
+<input type="button" value="+" onClick="AddItem(this.parentNode)" >
+</div>
+</div>
+<input type="submit" value="Зберегти"/>
+</form>
+</body>
+</html>

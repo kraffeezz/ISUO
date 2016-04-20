@@ -1,0 +1,84 @@
+      .buton
+      {
+      	border-radius : 50%;
+      	background:#4169e1;
+      	border-bottom:1px solid rgba(0,0,0,0.25);
+      	text-decoration:none; text-shadow:0 -1px 1px rgba(0,0,0,0.25);
+      	font-weight:bold;
+      	color :rgb(255,255,255);
+      }
+.buton:hover {
+	background:#395cc5;
+}
+.buton:active {
+	top:100px;
+}
+
+.buton1
+{
+
+	border-bottom-left-radius: 14px;
+	border-top-right-radius: 14px;
+	background:#4169e1;
+	border-bottom:1px solid rgba(0,0,0,0.25);
+	text-decoration:none; text-shadow:0 -1px 1px rgba(0,0,0,0.25);
+	font-weight:bold;
+	color :rgb(255,255,255);
+}
+.buton1:hover {
+	background:#395cc5;
+}
+.buton1:active {
+	top:100px;
+}
+body {
+	background-image: url(../images/fon.JPG);
+	background-repeat: repeat-y;
+	background-position: 0px 0px;
+	background-size: 100%;
+}
+.t_nz
+{
+	color:#FF0000;
+	font-weight:bold;
+}
+.t_zn
+{
+	color:#000080;
+}
+.nameprac
+{
+  color:#B3373A;
+  font-weight:bold;
+  font_size : 20 px;
+}
+.tabprac
+{
+	display:none;
+}
+.error
+{
+
+	box-shadow:0px 0px 10px 2px red;
+}
+.noerror
+{
+
+	box-shadow:0px 0px 10px 2px green;
+
+}
+input[type=text], textarea {
+	outline: none;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #DDDDDD;
+}
+input[type=text]:focus, textarea:focus {
+	border-color:#56b4ef;
+	box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+}
+.errort
+{
+	font-size: xx-small;
+		color:red;
+}
